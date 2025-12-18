@@ -52,10 +52,7 @@ APIキーは環境変数として管理し、セキュリティ面にも配慮�
 
 ## 公開URL
 
-（VercelでデプロイしたURLをここに記載）
-
-例：  
-https://weather-app-xxxxx.vercel.app
+https://weather-app-mu-inky-ujc731q76q.vercel.app/
 
 ---
 
