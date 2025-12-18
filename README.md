@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 天気アプリ（Weather App）
 
-## Getting Started
+## 概要
 
-First, run the development server:
+本アプリケーションは、Next.js（React）を用いて作成した天気情報表示Webアプリである。  
+サードパーティWeb APIである OpenWeatherMap API を利用し、指定した都市の現在の天気情報を取得・表示する。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+フロントエンドとサーバーサイドを同一プロジェクト内で実装し、外部API通信は Next.js の Route Handler を通して行っている。  
+APIキーは環境変数として管理し、セキュリティ面にも配慮した構成となっている。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 使用技術
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js（App Router）
+- React
+- TypeScript
+- OpenWeatherMap API
+- CSS（グローバルスタイル）
+- Git / GitHub
+- Vercel（デプロイ）
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 主な機能
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 都市名を入力して現在の天気情報を取得
+- 天候の概要（晴れ・曇りなど）の表示
+- 現在の気温（摂氏）の表示
+- 天気アイコンの表示
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 使い方
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. アプリにアクセスする  
+2. 画面上の入力欄に都市名（例：Tokyo）を入力する  
+3. 検索ボタンを押す  
+4. 入力した都市の天気情報が画面に表示される  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 動作例
+
+- 都市名：「Tokyo」を入力  
+- 検索実行  
+- 「晴天」「気温：9.99 ℃」などの情報が表示される  
+
+※ 実際の動作画面はレポートにスクリーンショットとして掲載する。
+
+---
+
+## 公開URL
+
+（VercelでデプロイしたURLをここに記載）
+
+例：  
+https://weather-app-xxxxx.vercel.app
+
+---
+
+## ソースコード
+
+本アプリケーションのソースコードは GitHub 上で公開している。
+
+https://github.com/chko23045-code/weather-app
+
+---
+
+## 補足
+
+- APIキーは `.env.local` および Vercel の環境変数として管理しており、公開リポジトリには含まれていない。
+- Next.js を用いた Web API 利用およびデプロイまで含めた一連のWebアプリ開発を目的として制作した。
